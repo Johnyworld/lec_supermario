@@ -6,4 +6,18 @@
 
 ## How to run
 
-not yet
+### install
+
+```jsx
+yarn
+or
+npm install
+```
+
+### run
+
+```jsx
+yarn start
+or
+npm run start
+```
