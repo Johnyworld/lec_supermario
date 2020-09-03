@@ -17,6 +17,12 @@ loadImage('/img/tiles.png')
     }
   }
 
+  for ( let x = 0; x < 25; ++x ) {
+    for ( let y = 12; y < 14; ++y ) {
+      sprites.drawTile('ground', context, x, y);
+    }
+  }
+
 });
 
 context.fillRect(0, 0, 50, 50);
