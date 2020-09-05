@@ -20,7 +20,7 @@ export default class Entity {
 
   addTrait(trait) {
     this.traits.push(trait);
-    this[trait.Name] = trait;
+    this[trait.NAME] = trait;
   }
 
   update(deltaTime) {
