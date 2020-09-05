@@ -27,7 +27,7 @@ Promise.all([
   const spriteLayer = createSpriteLayer(mario);
   comp.layers.push(spriteLayer);
 
-  const timer = new Timer(1/60);
+  const timer = new Timer(1/30);
   timer.update = function update(deltaTime) {
     comp.draw(context);
     mario.update(deltaTime);
