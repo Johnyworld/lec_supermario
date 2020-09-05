@@ -1,7 +1,6 @@
 import Timer from './Timer.js';
 import { loadLevel } from './loaders.js';
 import { createMario } from './entities.js';
-import { createCollisionLayer } from './layers.js';
 import { setupKeyboard } from './input.js';
 
 const canvas = document.getElementById('screen');
