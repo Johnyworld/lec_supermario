@@ -22,7 +22,5 @@ export default class Jump extends Trait {
       entity.vel.y = -this.velocity;
       this.engageTime -= deltaTime;
     }
-    // entity.pos.x += entity.vel.x * deltaTime;
-    // entity.pos.y += entity.vel.y * deltaTime;
   }
 }
