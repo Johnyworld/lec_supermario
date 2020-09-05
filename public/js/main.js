@@ -1,3 +1,4 @@
+import Camera from './Camera.js';
 import Timer from './Timer.js';
 import { loadLevel } from './loaders.js';
 import { createMario } from './entities.js';
@@ -12,6 +13,8 @@ Promise.all([
   loadLevel('1-1'),
 ])
 .then(([ mario, level ]) => {
+  const camera = new Camera();
+  window.camera = camera;
 
   mario.pos.set(64, 64);
 
@@ -20,7 +23,7 @@ Promise.all([
   const input = setupKeyboard(mario);
   input.listenTo(window);
 
-  setupMouseControl(canvas, mario);
+  setupMouseControl(canvas, mario, camera);
 
   const timer = new Timer(1/60);
   timer.update = function update(deltaTime) {
