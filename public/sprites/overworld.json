@@ -10,6 +10,18 @@
     {
       "name": "sky",
       "index": [3, 23]
-    } 
+    },
+    {
+      "name": "chocolate",
+      "index": [0, 1]
+    },
+    {
+      "name": "bricks",
+      "index": [1, 0]
+    },
+    {
+      "name": "chance",
+      "index": [24, 23]
+    }
   ]
 }
