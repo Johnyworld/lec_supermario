@@ -2,6 +2,7 @@ import Timer from './Timer.js';
 import { loadLevel } from './loaders.js';
 import { createMario } from './entities.js';
 import { setupKeyboard } from './input.js';
+import { setupMouseControl } from './debug.js';
 
 const canvas = document.getElementById('screen');
 const context = canvas.getContext('2d');
@@ -19,10 +20,12 @@ Promise.all([
   const input = setupKeyboard(mario);
   input.listenTo(window);
 
+  setupMouseControl(canvas, mario);
+
   const timer = new Timer(1/60);
   timer.update = function update(deltaTime) {
     level.update(deltaTime);
-    level.comp.draw(context);
+    level.comp.draw(context, camera);
   }
 
   timer.start();
