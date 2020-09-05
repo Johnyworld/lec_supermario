@@ -12,6 +12,7 @@
     },
     {
       "tile": "ground",
+      "type": "ground",
       "ranges": [
         [
           0, 212,
@@ -30,6 +31,7 @@
     },
     {
       "tile": "ground",
+      "type": "ground",
       "ranges": [
         [
           5, 3,
