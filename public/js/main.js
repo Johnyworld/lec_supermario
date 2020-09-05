@@ -24,7 +24,6 @@ Promise.all([
 
   const gravity = 2000;
   mario.pos.set(64, 180);
-  mario.vel.set(200, -600);
 
   const SPACE = 32;
   const input = new Keyboard();
