@@ -51,7 +51,6 @@ export default class SpriteSheet {
 
   drawAnim(name, context, x, y, distance) {
     const animation = this.animations.get(name);
-    console.log('Draw Anim', name, animation)
     this.drawTile(animation(distance), context, x, y);
   }
 
