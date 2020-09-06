@@ -116,5 +116,3 @@ export function createCameraLayer(cameraToDraw) {
       context.stroke();
   }
 }
-
-// TODO Ep6. scrolling 39:17
