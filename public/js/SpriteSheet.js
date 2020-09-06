@@ -7,12 +7,19 @@ export default class SpriteSheet {
   }
 
   define(name, x, y, width, height) {
-    const buffer = document.createElement('canvas');
-    buffer.width = width;
-    buffer.height = height;
-    buffer
-      .getContext('2d')
-      .drawImage(
+    const buffers = [false, true].map(flip => {
+      const buffer = document.createElement('canvas');
+      buffer.width = width;
+      buffer.height = height;
+  
+      const context = buffer.getContext('2d');
+      
+      if ( flip ) {
+        context.scale(-1, 1);
+        context.translate(-width, 0);
+      }
+  
+      context.drawImage(
         this.image,
         x,
         y,
@@ -23,15 +30,17 @@ export default class SpriteSheet {
         width,
         height
       );
-    this.tiles.set(name, buffer);
+      return buffer;
+    });
+    this.tiles.set(name, buffers);
   }
 
   defineTile(name, x, y) {
     this.define(name, x*this.width, y*this.width, this.width, this.height);
   }
 
-  draw(name, context, x, y) {
-    const buffer = this.tiles.get(name);
+  draw(name, context, x, y, flip = false) {
+    const buffer = this.tiles.get(name)[flip ? 1 : 0];
     context.drawImage(buffer, x, y);
   }
 
