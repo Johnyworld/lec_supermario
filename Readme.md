@@ -82,3 +82,5 @@ Modern Pirates 라는 게임을 만들면서는 기본 Class 를 만들고 플�
 ###### 해결
 
 이를 해결하기 위한 코드는 Arrow Right 기준으로 `entity.go.dir += keyState ? 1 : -1;` 이다. 이렇게 하면 Arrow 키를 누르고 있는 동안에는 dir 이 0이 될 수 없다.
+
+Ep9 10:23
