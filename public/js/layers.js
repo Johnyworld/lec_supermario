@@ -1,19 +1,14 @@
-export function createBackgroundLayer(level, sprites) {
-  const tiles = level.tiles;
-  const resolver = level.tileCollider.tiles;
+import TileResolver from "./TileResolver.js";
+
+export function createBackgroundLayer(level, tiles, sprites) {
+  const resolver = new TileResolver(tiles);
 
   const buffer = document.createElement('canvas');
   const context = buffer.getContext('2d');
   buffer.width = 256 + 16;
   buffer.height = 240;
 
-  let startIndex, endIndex;
-
-  function redraw(drawFrom, drawTo) {
-    // 현재 카메라 내에 있는 타일들만 Draw 해줄 것이다.
-    startIndex = drawFrom; // ex 3
-    endIndex = drawTo; // ex 19
-
+  function redraw(startIndex, endIndex) {
     for (let x = startIndex; x <= endIndex; ++x) {
       const col = tiles.grid[x];
       if (col) {
