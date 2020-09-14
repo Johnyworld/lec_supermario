@@ -1,8 +1,8 @@
 {
   "spriteSheet": "overworld",
-  "backgrounds": [
+  "tiles": [
     {
-      "tile": "sky",
+      "name": "sky",
       "ranges": [
         [
           0, 212,
@@ -11,7 +11,7 @@
       ]
     },
     {
-      "tile": "ground",
+      "name": "ground",
       "type": "ground",
       "ranges": [
         [
@@ -21,7 +21,7 @@
       ]
     },
     {
-      "tile": "sky",
+      "name": "sky",
       "ranges": [
         [
           75, 2,
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "tile": "ground",
+      "name": "ground",
       "type": "ground",
       "ranges": [
         [
@@ -75,7 +75,7 @@
       ]
     },
     {
-      "tile": "bricks",
+      "name": "bricks",
       "type": "ground",
       "ranges": [
         [
@@ -123,7 +123,7 @@
       ]
     },
     {
-      "tile": "chance",
+      "name": "chance",
       "type": "ground",
       "ranges": [
         [ 2, 2 ], 
@@ -142,7 +142,7 @@
       ]
     },
     {
-      "tile": "chocolate",
+      "name": "chocolate",
       "type": "ground",
       "ranges": [
         [ 141, 1, 9, 1 ], 
@@ -196,20 +196,83 @@
         [53, 9],
         [64, 9]
       ]
+    },
+    {
+      "pattern": "cloud-single",
+      "ranges": [
+        [25, 2],
+        [25, 2],
+        [35, 3],
+        [44, 2],
+        [64, 3],
+        [74, 2],
+        [80, 3],
+        [90, 2],
+        [108, 3],
+        [118, 2],
+        [128, 3],
+        [138, 2]
+      ]
     }
   ],
   "patterns": {
-    "pipe-cap-vert": {
-      "backgrounds": [
+    "cloud-single": {
+      "tiles": [
         {
-          "tile": "pipe-insert-vert-left",
+          "name": "cloud-1-1",
+          "type": "sky",
+          "ranges": [
+            [0, 0]
+          ]
+        },
+        {
+          "name": "cloud-1-2",
+          "type": "sky",
+          "ranges": [
+            [1, 0]
+          ]
+        },
+        {
+          "name": "cloud-1-3",
+          "type": "sky",
+          "ranges": [
+            [2, 0]
+          ]
+        },
+        {
+          "name": "cloud-2-1",
+          "type": "sky",
+          "ranges": [
+            [0, 1]
+          ]
+        },
+        {
+          "name": "cloud-2-2",
+          "type": "sky",
+          "ranges": [
+            [1, 1]
+          ]
+        },
+        {
+          "name": "cloud-2-3",
+          "type": "sky",
+          "ranges": [
+            [2, 1]
+          ]
+        }
+      ]
+    },
+    "pipe-cap-vert": {
+      "tiles": [
+        {
+          "name": "pipe-insert-vert-left",
           "type": "ground",
           "ranges": [
             [0, 0]    
           ]
         },
         {
-          "tile": "pipe-insert-vert-right",
+          "name": "pipe-insert-vert-right",
           "type": "ground",
           "ranges": [
             [1, 0]    
@@ -218,16 +281,16 @@
       ]
     },
     "pipe-section-vert": {
-      "backgrounds": [
+      "tiles": [
         {
-          "tile": "pipe-vert-left",
+          "name": "pipe-vert-left",
           "type": "ground",
           "ranges": [
             [0, 0]    
           ]
         },
         {
-          "tile": "pipe-vert-right",
+          "name": "pipe-vert-right",
           "type": "ground",
           "ranges": [
             [1, 0]    
@@ -236,7 +299,7 @@
       ]
     },
     "pipe-2h": {
-      "backgrounds": [
+      "tiles": [
         {
           "pattern": "pipe-cap-vert",
           "ranges": [
@@ -252,7 +315,7 @@
       ]
     },
     "pipe-3h": {
-      "backgrounds": [
+      "tiles": [
         {
           "pattern": "pipe-cap-vert",
           "ranges": [
@@ -268,7 +331,7 @@
       ]
     },
     "pipe-4h": {
-      "backgrounds": [
+      "tiles": [
         {
           "pattern": "pipe-cap-vert",
           "ranges": [
